@@ -7,9 +7,16 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:', 'https://portfolio-strapi-tv57.onrender.com'], 
+          'connect-src': ["'self'", 'https:'], 
           'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          headers: [
+          'Content-Type',
+          'Authorization',
+          'Origin',
+          'Accept',
+          'X-Requested-With'
+      ],
           upgradeInsecureRequests: null,
         },
       },
