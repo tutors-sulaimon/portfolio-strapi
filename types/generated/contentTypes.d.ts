@@ -418,17 +418,17 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::contact.contact'
     > &
       Schema.Attribute.Private;
-    message: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
+    message: Schema.Attribute.Blocks;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    subject: Schema.Attribute.String & Schema.Attribute.Required;
+    subject: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

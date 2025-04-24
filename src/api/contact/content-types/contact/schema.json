@@ -13,19 +13,19 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "email": {
       "type": "email",
-      "required": true
+      "required": false
     },
     "subject": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "message": {
       "type": "blocks",
-      "required": true
+      "required": false
     }
   }
 }
