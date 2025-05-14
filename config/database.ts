@@ -9,10 +9,10 @@
           user: env('DATABASE_USERNAME'),
           password: env('DATABASE_PASSWORD'),
           schema: env('DATABASE_SCHEMA', 'public'), // Not required
-          ssl: env.bool('DATABASE_SSL', false), // Use for SSL connection
-          // ssl: {
-          //   rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), 
-          // },
+          ssl: {
+            rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), 
+          },
+          //ssl: env.bool('DATABASE_SSL', false), // Use for SSL connection
         },
         debug: false,
       },
