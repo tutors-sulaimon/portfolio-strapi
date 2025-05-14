@@ -26,7 +26,7 @@ export default [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:5173', 'http://localhost:1337'], 
+      origin: ['https://ekundayosulaimon.netlify.app', 'https://portfolio-backend-strapi-q1b0.onrender.com'], 
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     },
   },
