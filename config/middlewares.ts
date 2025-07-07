@@ -10,14 +10,6 @@ export default [
           'connect-src': ["'self'", 'https:'], 
           'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          headers: [
-          'Content-Type',
-          'Authorization',
-          'Origin',
-          'Accept',
-          'X-Requested-With',
-          'x-captcha-token',
-      ],
           upgradeInsecureRequests: null,
         },
       },
@@ -27,8 +19,19 @@ export default [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['https://sulaimonekundayo.com', 'https://portfolio-backend-strapi-q1b0.onrender.com'], 
+      origin: [
+        'https://sulaimonekundayo.com',
+        'https://portfolio-backend-strapi-q1b0.onrender.com'
+      ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'Origin',
+        'Accept',
+        'X-Requested-With',
+        'x-captcha-token', // <-- Add this line
+      ],
     },
   },
   'strapi::poweredBy',
