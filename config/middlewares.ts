@@ -15,7 +15,8 @@ export default [
           'Authorization',
           'Origin',
           'Accept',
-          'X-Requested-With'
+          'X-Requested-With',
+          'x-captcha-token',
       ],
           upgradeInsecureRequests: null,
         },
